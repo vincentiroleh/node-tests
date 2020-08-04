@@ -1,0 +1,22 @@
+{
+  "name": "node-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && npm test",
+    "test": "mocha **/*.test.js",
+    "build": "tsc utils/utils.ts && tsc utils/utils.test.ts",
+    "clean": "rm -rf utils/utils.js && rm -rf utils/utils.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mocha": "^8.0.1",
+    "@types/node": "^14.0.27"
+  },
+  "devDependencies": {
+    "mocha": "^8.1.0"
+  }
+}
