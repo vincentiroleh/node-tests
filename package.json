@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm test",
-    "dev": "npm run build && nodemon --exec 'npm test'",
-    "test": "mocha **/*.test.js",
+    "test": "npm run build && nodemon --exec mocha **/*.test.js",
     "build": "tsc **/**.ts",
     "clean": "rm -rf **/utils**.js"
   },
