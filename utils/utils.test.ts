@@ -1,5 +1,4 @@
 const expect = require('expect');
-
 const utils = require('./utils');
 
 it('should add two numbers', () => {
@@ -35,5 +34,18 @@ it('should set firstName and lastName', () => {
 
     const result = utils.setName(user, 'Vincent Iroleh');
     expect(result).toInclude({ firstName: 'Vincent', lastName: 'Iroleh' }).toBeA('object');
+});
 
-})
+it('should async add two numbers', (done) => {
+    utils.asyncAdd(4, 3, (sum: number) => {
+        expect(sum).toBe(7).toBeA('number');
+        done();
+    });
+});
+
+it('should async square a number', (done) => {
+    utils.asyncSquare(5, (result: number) => {
+        expect(result).toBe(25).toBeA('number');
+        done();
+    });    
+});
